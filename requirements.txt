@@ -1,0 +1,7 @@
+Keras==2.0.8
+numpy==1.13.3
+pandas==0.20.3
+tensorboard==1.0.0a6
+tf-nightly==1.4.0.dev20171011
+sklearn
+scikit-image

@@ -1,0 +1,22 @@
+version: '2'
+services: 
+  jupyter:
+    build: .
+    ports: 
+      - 8888:8888
+    volumes:
+      - ./logs:/home/jovyan/work/logs
+      - ./data:/home/jovyan/work/data
+      - ./static:/home/jovyan/work/static
+      - ./notebooks:/home/jovyan/work
+    command: jupyter notebook --no-browser --port 8888
+
+  tensorboard:
+    build: .
+    ports:
+      - 8889:8889
+    volumes: 
+      - ./logs:/home/logs/ 
+    command: tensorboard --logdir /home/logs --port 8889
+
+  
